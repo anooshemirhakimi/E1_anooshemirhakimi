@@ -1,0 +1,47 @@
+Python 3.7.6 (tags/v3.7.6:43364a7ae0, Dec 19 2019, 00:42:30) [MSC v.1916 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+>>> class coordinate:
+	x1=0
+	y1=0
+	x2=0
+	y2=0
+
+	
+>>> p1=coordinate()
+>>> p2=coordinate()
+>>> p1.x1=3
+>>> p1.y1=4
+>>> p2.x2=10
+>>> p2.y2=7
+>>> def fun(pint1,point2):
+	return((point2.x2-point1.x1)**2 + (point2.y2-point1.y1)**2)**0.5
+
+>>> func(p1,p2)
+Traceback (most recent call last):
+  File "<pyshell#16>", line 1, in <module>
+    func(p1,p2)
+NameError: name 'func' is not defined
+>>> class coordinate:
+	x1=0
+	y1=0
+	x2=0
+	y2=0
+
+	
+>>> p1=coordinate()
+>>> p2=coordinate()
+>>> p1.x1=3
+>>> p1.y1=4
+>>> p2.x2=10
+>>> p2.y2=7
+>>> def func(pint1,point2):
+	return((point2.x2-point1.x1)**2 + (point2.y2-point1.y1)**2)**0.5
+
+>>> func(p1,p2)
+Traceback (most recent call last):
+  File "<pyshell#27>", line 1, in <module>
+    func(p1,p2)
+  File "<pyshell#26>", line 2, in func
+    return((point2.x2-point1.x1)**2 + (point2.y2-point1.y1)**2)**0.5
+NameError: name 'point1' is not defined
+>>> 
