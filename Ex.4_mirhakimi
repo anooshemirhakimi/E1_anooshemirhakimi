@@ -1,0 +1,15 @@
+d= int(input('ruz= '))
+m= int(input('mah= '))
+y= int(input('sal= '))
+
+months=[31,28,31,30,31,30,31,30,31,30,31,30]
+days_past= 0
+
+if y% 400 ==0 or (y% 4 ==0 and y%100 != 0):
+    months[1]=29
+    
+for i in months[:m-1]:
+    days_past= days_past +i
+
+days_past += d
+print(days_past)
