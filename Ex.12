@@ -1,0 +1,13 @@
+win = tkinter.Tk()
+lb1 = tkinter.Label(win,text='user')
+en1 = tkinter.Entry(win)
+lb2 = tkinter.Label(win,text='pass')
+en2 = tkinter.Entry(win)
+btn1 = tkinter.Button(win)
+
+
+lb1.pack()
+en1.pack()
+lb2.pack()
+en2.pack()
+btn1.pack()
