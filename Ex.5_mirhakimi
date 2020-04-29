@@ -1,0 +1,32 @@
+def julian_date(d,m,y):
+    days=[31,28,31,30,31,30,31,30,31,30,31,30]
+    days_passed=0
+    if y% 400==0 or (y% 4==0 and y% 100!=0):
+        days[1]=29
+    for i in days[:m-1]:
+        days_passed +=i
+
+    days_passed +=d
+    return(days_passed)
+        
+
+
+def pos(num):
+ for i in range(num):
+     print(i)
+     
+
+def div(a,b):
+ if a%b == 0:
+     print('bakhsh pazir ast')
+ else:
+     print('bakhsh pazir nist')
+
+
+def prime(num):
+   limit= int(num** 0.5)
+   for i in range(2,limit+1):
+       if num % i ==0:
+        return 'aval nist'
+   return 'aval ast' 
+     
