@@ -1,4 +1,4 @@
-lass time:
+class time:
        def __init__(obj,h,m,s):
                obj.hour = h
                obj.minute = m
@@ -6,12 +6,49 @@ lass time:
        def show(obj,ruz):
                obj.date = ruz
                return str(obj.hour)+':'+str(obj.minute)+':'+str(obj.second)
-       def show1(obj,total):
-	       obj.sumsanie = total
-	       return (obj.hour*3600 + obj.minute*60 + obj.second)
-
-t1=time(3,10,57)
-t1.show(2)
-'3:10:57'
->>> t1.show1(5)
-11457
+       def show1(obj):
+	       return obj.hour*3600 + obj.minute*60 + obj.second
+       def kam_kardan(obj,hh,mm,ss):
+               obj.hour -= hh
+               obj.minute -= mm
+               obj.second -= ss
+       def add(obj,satejadid):
+           obj.hour +=satejadid.hour
+           obj.minute += satejadid.minute
+           obj.second += satejadid.second
+       def __add__(obj,obj2):
+           obj.hour += obj2.hour
+           obj.minute += obj2.minute
+           obj.second += obj2.second    
+           if obj.second > 60 :
+              obj.second -= 60
+              obj.minute +=1
+           if obj.minute > 60:
+              obj.minute -= 60
+              obj.hour+=1 
+       def __sub__(obj,obj2):
+           obj.hour -= obj2.hour
+           obj.minute -= obj2.minute
+           obj.second -= obj2.second
+       def __lt__(obj,obj2):
+           if obj.hour*3600+obj.minute*60+obj.second >obj2.hour*3600+obj2.minute*60+obj2.second :
+            return True
+           else:
+               return False
+       def __le__(obj,obj2):
+           if obj.hour*3600+obj.minute*60+obj.second >= obj2.hour*3600+obj2.minute*60+obj2.second :
+         
+            return True
+           else:
+               return False
+            
+       def __ge__(obj,obj2):
+           if obj.hour*3600+obj.minute*60+obj.second <=obj2.hour*3600+obj2.minute*60+obj2.second :
+            return True
+           else:
+               return False
+       def __eq__(obj,obj2):
+           if obj.hour*3600+obj.minute*60+obj.second ==obj2.hour*3600+obj2.minute*60+obj2.second :
+            return True
+           else:
+               return False
